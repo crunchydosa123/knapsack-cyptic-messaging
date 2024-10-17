@@ -2,20 +2,21 @@ import { useState } from 'react'
 import ReceivedMessages from './components/ReceivedMessages'
 import Chat from './components/Chat'
 import SentMessages from './components/SentMessages'
+import Navbar from './components/Navbar'
+import { MessageProvider } from './contexts/MessageContext'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-    <div className='text-2xl m-5'>Project</div>
-    <div className='grid grid-cols-3'>
-      <ReceivedMessages />
-      <Chat />
-      <SentMessages />
-    </div>
-    </>
+    <MessageProvider >
+      <Navbar />
+      <div className='grid grid-cols-3 px-4'>
+        <ReceivedMessages />
+        <Chat />
+        <SentMessages />
+      </div>
+    </MessageProvider>
   )
 }
 
