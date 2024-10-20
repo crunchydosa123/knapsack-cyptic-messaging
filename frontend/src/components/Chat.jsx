@@ -7,7 +7,8 @@ import ReceivedMessageContext from '../contexts/ReceivedMessageContext.jsx';
 import UserContext from '../contexts/UserContext.jsx';
 
 // Connection to the server
-const socket = io('http://localhost:5000');
+const socket = io('https://knapsack-cyptic-messaging-1.onrender.com');
+
 
 // Superincreasing sequence and public key setup
 const privateKey = [2, 3, 6, 13, 27, 52, 105, 210]; // Superincreasing sequence
