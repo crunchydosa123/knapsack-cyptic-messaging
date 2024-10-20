@@ -3,10 +3,10 @@ import React, { createContext, useState } from 'react';
 const MessageContext = createContext();
 
 export const MessageProvider = ({ children }) => {
-    const [globalMessage, setGlobalMessage] = useState('');
+    const [sentMessage, setSentMessage] = useState('');
 
     return (
-        <MessageContext.Provider value={{ globalMessage, setGlobalMessage }}>
+        <MessageContext.Provider value={{ sentMessage, setSentMessage }}>
             {children}
         </MessageContext.Provider>
     );
